@@ -1,7 +1,7 @@
 let express = require("express");
 let router = express.Router();
 
-const autor = require("../Controllers/proyecto.controller.js");
+const proyecto = require("../Controllers/proyecto.controller.js");
 
 router.post("/proyecto/create", proyecto.create);
 router.get("/proyecto/all", proyecto.retrieveAllProyecto);
@@ -10,7 +10,7 @@ router.put("/proyecto/update/:id", proyecto.updateById);
 router.delete("/proyecto/delete/:id", proyecto.deleteById);
 
 
-const libro = require("../Controllers/tarea.controller.js");
+const tarea = require("../Controllers/tarea.controller.js");
 
 router.post("/tarea/create", tarea.create);
 router.get("/tarea/all", tarea.retrieveAllTarea);
