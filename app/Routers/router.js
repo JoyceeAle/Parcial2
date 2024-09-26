@@ -1,22 +1,22 @@
 let express = require("express");
 let router = express.Router();
 
-const autor = require("../Controllers/autor.controller.js");
+const autor = require("../Controllers/proyecto.controller.js");
 
-router.post("/autor/create", autor.create);
-router.get("/autor/all", autor.retrieveAllAutor);
-router.get("/autor/onebyid/:id", autor.getAutorById);
-router.put("/autor/update/:id", autor.updateById);
-router.delete("/autor/delete/:id", autor.deleteById);
+router.post("/proyecto/create", proyecto.create);
+router.get("/proyecto/all", proyecto.retrieveAllProyecto);
+router.get("/proyecto/onebyid/:id", proyecto.getProyectoById);
+router.put("/proyecto/update/:id", proyecto.updateById);
+router.delete("/proyecto/delete/:id", proyecto.deleteById);
 
 
-const libro = require("../Controllers/libro.controller.js");
+const libro = require("../Controllers/tarea.controller.js");
 
-router.post("/libro/create", libro.create);
-router.get("/libro/all", libro.retrieveAllLibro);
-router.get("/libro/onebyid/:id", libro.getLibroById);
-router.put("/libro/update/:id", libro.updateById);
-router.delete("/libro/delete/:id", libro.deleteById);
+router.post("/tarea/create", tarea.create);
+router.get("/tarea/all", tarea.retrieveAllTarea);
+router.get("/tarea/onebyid/:id", tarea.getTareaById);
+router.put("/tarea/update/:id", tarea.updateById);
+router.delete("/tarea/delete/:id", tarea.deleteById);
 
 
 const usuario = require("../Controllers/usuario.controller.js");
