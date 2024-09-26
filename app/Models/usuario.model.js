@@ -9,24 +9,15 @@ module.exports = (sequelize, Sequelize) => {
       nombre: {
         type: Sequelize.STRING,
       },
-      apellido: {
+      correo: {
         type: Sequelize.STRING,
       },
-      email: {
+      contrasena: {
         type: Sequelize.STRING,
       },
-      telefono: {
-        type: Sequelize.INTEGER,
-      },
-      direccion: {
-        type: Sequelize.STRING,
-      },
-      fechaRegistro: {
+      fechaCreacion: {
         type: Sequelize.DATE,
       },
-      estado: {
-        type: Sequelize.INTEGER,
-      }
     });
     return Usuario;
   };

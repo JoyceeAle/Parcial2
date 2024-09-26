@@ -6,12 +6,9 @@ exports.create = (req, res) => {
 
   try {
     usuario.nombre = req.body.nombre;
-    usuario.apellido = req.body.apellido;
-    usuario.email = req.body.email;
-    usuario.telefono = req.body.telefono;
-    usuario.direccion = req.body.direccion;
-    usuario.fechaRegistro = req.body.fechaRegistro;
-    usuario.estado = req.body.estado;
+    usuario.correo = req.body.correo;
+    usuario.contrasena = req.body.contrasena;
+    usuario.fechaCreacion = req.body.fechaCreacion;
 
     Usuario.create(usuario).then((result) => {
       res.status(200).json({
@@ -81,12 +78,9 @@ try {
   } else {
     let updatedObject = {
       nombre: req.body.nombreLibro,
-      apellido: req.body.editorial,
-      email: req.body.autor,
-      telefono: req.body.genero,
-      direccion: req.body.paisAutor,
-      fechaRegistro: req.body.numPaginas,
-      estado: req.body.anioEdicion,
+      correo: req.body.correo,
+      contrasena: req.body.contrasena,
+      fechaCreacion: req.body.fechaCreacion,
     };
     let result = await Usuario.update(updatedObject, { returning: true, where: { idUsuario: usuarioId } });
 
