@@ -1,23 +1,26 @@
 module.exports = (sequelize, Sequelize) => {
-    const Autor = sequelize.define("autor", {
+    const Tarea = sequelize.define("tarea", {
       
-      idAutor: {
+      idTarea: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
+      idProyecto: {
+        type: Sequelize.INTEGER,
+      },
       nombre: {
         type: Sequelize.STRING,
       },
-      apellido: {
+      estado: {
         type: Sequelize.STRING,
       },
-      nacionalidad: {
-        type: Sequelize.STRING,
+      fechaCreacion: {
+        type: Sequelize.DATE,
       },
-      fechaNacimiento: {
+      fechaVencimiento: {
         type: Sequelize.DATE,
       }
     });
-    return Autor;
+    return Tarea;
   };
