@@ -5,11 +5,11 @@ exports.create = (req, res) => {
   let tarea = {};
 
   try {
-    autor.idProyecto = req.body.idProyecto;
-    autor.nombre = req.body.nombre;
-    autor.estado = req.body.estado;
-    autor.fechaCreacion = req.body.fechaCreacion;
-    autor.fechaVencimiento = req.body.fechaVencimiento;
+    tarea.idProyecto = req.body.idProyecto;
+    tarea.nombre = req.body.nombre;
+    tarea.estado = req.body.estado;
+    tarea.fechaCreacion = req.body.fechaCreacion;
+    tarea.fechaVencimiento = req.body.fechaVencimiento;
 
     Tarea.create(tarea).then((result) => {
       res.status(200).json({

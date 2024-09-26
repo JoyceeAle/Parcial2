@@ -5,10 +5,10 @@ exports.create = (req, res) => {
   let proyecto = {};
 
   try {
-    libro.idUsuario = req.body.idUsuario;
-    libro.nombre = req.body.nombre;
-    libro.descripcion = req.body.descripcion;
-    libro.fechaCreacion = req.body.fechaCreacion;
+    proyecto.idUsuario = req.body.idUsuario;
+    proyecto.nombre = req.body.nombre;
+    proyecto.descripcion = req.body.descripcion;
+    proyecto.fechaCreacion = req.body.fechaCreacion;
 
     Proyecto.create(proyecto).then((result) => {
       res.status(200).json({
